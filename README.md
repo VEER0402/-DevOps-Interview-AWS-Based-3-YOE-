@@ -369,69 +369,108 @@ I have hands-on AWS DevOps experience, strong CI/CD knowledge, and focus on auto
 
 Answer: Use version-controlled migration tools (e.g., Flyway/Liquibase). The pipeline runs migrations automatically before application deploy steps. Keep migrations reversible and test them in staging environments.
 
+
+
+
 3) What strategies do you use for zero-downtime deployments?
 
 Answer: Use techniques like blue/green, canary deployments, or rolling updates with health checks and traffic shifting so users aren’t impacted during upgrades.
+
+
+
 
 4) Explain Kubernetes pod lifecycle and how to handle failures.
 
 Answer: A pod goes through Pending → Running → Succeeded/Failed/Unknown. To handle failures, implement liveness/readiness probes, set resource limits/requests, use horizontal autoscaling, and pod disruption budgets for resilience.
 
+
+
+
 5) How do you handle secrets management in Kubernetes?
 
 Answer: Use Kubernetes Secrets (or better, external tools like HashiCorp Vault, AWS Secrets Manager). Encrypt secrets, restrict RBAC access, and avoid storing them in Git.
+
+
+
 
 6) What’s your approach to Infrastructure as Code (IaC)?
 
 Answer: Use tools like Terraform/CloudFormation/Ansible, define infrastructure modules for reusability, store code in VCS, and run plan/apply with automated approval gates in pipelines.
 
+
+
+
 7) How do you manage Terraform state in a team?
 
 Answer: Store state in a remote backend (e.g., S3 with locking via DynamoDB), enable state versioning, and restrict access – this prevents conflicts in collaborative environments.
+
+
 
 8) How do you implement observability in microservices?
 
 Answer: Use distributed tracing (OpenTelemetry/Jaeger), collect metrics (Prometheus), centralized logging (ELK/Loki), dashboards (Grafana), and correlate data via trace IDs.
 
+
+
 9) How do you reduce alert fatigue in monitoring?
 
 Answer: Tune alert thresholds, group related alerts, define meaningful SLO/SLI targets, and use escalation policies so only actionable alerts fire.
+
+
 
 10) What’s your strategy for cloud cost optimization?
 
 Answer: Right-size instances, automated scaling policies, scheduled spin-up/down for non-prod resources, spot instances, and tagging for cost allocation.
 
+
+
 11) How do you secure a CI/CD pipeline?
 
 Answer: Integrate code scanning (SonarQube), container scanning (Trivy/Clair), use least-privilege access, encrypted secrets, and compliance checks before deployment.
+
+
 
 12) What is “Shift Left” in DevOps?
 
 Answer: Bring testing, security, and validation earlier in the SDLC so issues are detected sooner and fail less frequently later in the pipeline.
 
+
+
 13) How do you handle merge conflicts in a Git workflow?
 
 Answer: Encourage frequent rebasing with the main branch, clear communication, use feature branches, and automated integration tests to catch conflicts early.
+
+
 
 14) How would you troubleshoot a production outage?
 
 Answer: Quickly determine the impact, isolate the failure, check logs/metrics, rollback if needed, communicate status, then conduct a post-mortem to prevent recurrence.
 
+
+
 15) Explain Docker’s role in DevOps.
 
 Answer: Docker packages apps in containers that run consistently across environments (dev → staging → prod), enabling faster builds, tests, and deployments.
+
+
 
 16) What’s the difference between Continuous Delivery and Continuous Deployment?
 
 Answer: Both automate delivery. Continuous Delivery ensures code is ready to deploy with a human approval step. Continuous Deployment fully automates deployment without manual approvals.
 
+
+
 17) What’s a Canary Deployment?
 
 Answer: Release updates to a small subset of traffic/users before full rollout. If issues surface, rollback quickly with minimal user impact.
 
+
+
 18) How do you centralize logging in microservices?
 
 Answer: Use a stack like ELK (Elasticsearch, Logstash, Kibana) or Loki + Promtail + Grafana so logs from different services flow to one system for search and alerting.
+
+
 
 19) What’s your strategy for high availability and disaster recovery?
 
